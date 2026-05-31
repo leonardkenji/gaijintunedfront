@@ -4,7 +4,7 @@ const navLinks = [{href:"/", label:"Our Fleet"},{href:"/", label:"Experiences"},
 
 export const Navbar = () => {
   return(
-    <header className="fixed top-0 left-0 w-full py-8 z-50">
+    <header className="fixed top-0 left-0 bg-background w-full py-8 z-100">
     {/*Desktop Navbar*/}
     <nav className="container mx-auto px-8 flex items-center justify-between">
       <a href="/" className="text-xl font-bold"> GAIJIN TUNNED</a>

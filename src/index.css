@@ -1,1 +1,64 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: #080F0F;
+  --color-foreground: #A4BAB7;
+
+  --color-primary: #A52422;
+  --color-primary-foreground: #BEA57D;
+
+  --color-secondary: #CFD945;
+  --color-secondary-foreground: #244242;
+
+  --color-muted: #244242;
+  --color-muted-foreground:#121716;
+
+  --radius: 8px;
+}
+
+@layer base {
+  html{
+    scroll-behavior: smooth;
+  }
+
+  body{
+   background-color: var(--color-background);
+   color: var(--color-foreground);
+   font-family: Helvetica, sans-serif;
+  }
+}
+
+@layer utilities {
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        filter: blur(10px);
+      }
+      to {
+        opacity: 1;
+        filter: blur(0px);
+      }
+    }
+    @keyframes slow-drift{
+      0%,
+      100%{
+        transform: translate(0px, 0px);
+      }
+      25%{
+        transform: translate(10px, -5px);
+      }
+      50%{
+        transform: translate(-5px, 15px);
+      }
+      75%{
+        transform: translate(15px, 10px);
+      }
+    }
+    .animate-fade-in{
+      animation: fade-in 0.8s ease-out both;
+    }
+
+    .animation-delay-300{
+      animation-delay: 300ms;
+    }
+  }
