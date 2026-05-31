@@ -1,5 +1,5 @@
 import { useCarData } from "../hooks/useCarData";
-import { Card } from "../components/Card";
+import { Card } from "../components/carCard";
 
 export const Cars = () =>{
 
@@ -15,8 +15,9 @@ return (
       {data?.map((car) => (
         <Card
           key={car.id}
+          carImg={car.imageUrl}
           title={car.carName}
-          specs={car.carSpecs}
+          specs={car.carDescription}
         />
       ))}
     </div>
