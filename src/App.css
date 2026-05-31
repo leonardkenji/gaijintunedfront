@@ -1,11 +1,1 @@
-.header {
-  display: flex;
-  justify-content: center;
-}
-
-.car-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  padding: 16px;
-}
+/* Styles migrated to Tailwind utilities in index.css */

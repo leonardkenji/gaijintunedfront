@@ -1,27 +1,28 @@
 import { useExperienceData } from "../hooks/useExperienceData";
 import { Card } from "../components/experienceCard";
 
-export const Experiences = () =>{
+export const Experiences = () => {
+  const { data } = useExperienceData();
 
-const { data } =  useExperienceData();
-
-return (
-  <div className="my-5 flex flex-col items-center">
-    <div className="w-full">
-      <h1 className="text-center text-5xl font-bold">Experiences</h1>
-    </div>
-    <div className="container w-80%">
-      <div className="car-grid mt-5">
-        {data?.map((experience) => (
-          <Card
-            key={experience.id}
-            imageUrl={experience.imageUrl}
-            title={experience.experienceName}
-            specs={experience.experienceDescription}
-          />
-        ))}
+  return (
+    <section id="experiences" className="py-24 bg-muted/5">
+      <div className="max-w-7xl mx-auto px-8">
+        <div className="flex items-baseline gap-5 mb-16">
+          <span className="text-secondary font-black text-sm tracking-widest select-none">02</span>
+          <div className="w-12 h-px bg-foreground/20 self-center" />
+          <h2 className="text-5xl font-black tracking-tight">Experiences</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {data?.map((experience) => (
+            <Card
+              key={experience.id}
+              imageUrl={experience.imageUrl}
+              title={experience.experienceName}
+              specs={experience.experienceDescription}
+            />
+          ))}
+        </div>
       </div>
-    </div>
-  </div>
-);
+    </section>
+  );
 };

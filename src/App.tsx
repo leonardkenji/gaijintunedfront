@@ -5,6 +5,7 @@ import { Experiences } from "./sections/Experiences";
 import { AboutUs } from "./sections/AboutUs";
 // aqui importar o hook dos dados da API
 import { Navbar } from "./layout/Navbar";
+import { Footer } from './layout/Footer';
 function App() {
   // o elemento escrito em chaves eh o unico acessado
 
@@ -17,6 +18,7 @@ function App() {
       <Experiences />
       <AboutUs />
     </main>
+    <Footer />
   </div>
   )
 }
