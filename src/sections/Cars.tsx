@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useCarData } from "../hooks/useCarData";
 import { Card } from "../components/carCard";
 
@@ -14,12 +15,13 @@ export const Cars = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data?.map((car) => (
-            <Card
-              key={car.id}
-              carImg={car.imageUrl}
-              title={car.carName}
-              specs={car.carDescription}
-            />
+            <Link key={car.id} to={`/car/${car.id}`}>
+              <Card
+                carImg={car.imageUrl}
+                title={car.carName}
+                specs={car.carDescription}
+              />
+            </Link>
           ))}
         </div>
       </div>

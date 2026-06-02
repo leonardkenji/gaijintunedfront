@@ -1,5 +1,6 @@
 import { useExperienceData } from "../hooks/useExperienceData";
 import { Card } from "../components/experienceCard";
+import { Link } from "react-router-dom";
 
 export const Experiences = () => {
   const { data } = useExperienceData();
@@ -14,12 +15,14 @@ export const Experiences = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {data?.map((experience) => (
+            <Link key={experience.id} to={`/experience/${experience.id}`}>
             <Card
               key={experience.id}
               imageUrl={experience.imageUrl}
               title={experience.experienceName}
               specs={experience.experienceDescription}
             />
+            </Link>
           ))}
         </div>
       </div>
