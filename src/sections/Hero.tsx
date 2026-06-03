@@ -11,10 +11,10 @@ export const Hero = () => {
       />
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-transparent" />
 
       {/* Accent line */}
-      <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-transparent via-primary to-transparent opacity-60" />
+      <div className="absolute left-0 top-0 w-1 h-full bg-linear-to-b from-transparent via-primary to-transparent opacity-60" />
 
       {/* Content */}
       <div className="relative z-10 w-full px-10 py-20 flex items-center justify-between">
